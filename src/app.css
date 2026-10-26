@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+/* Brand tokens: change colors and fonts here only. Ice is sampled from the logo. */
+@theme {
+  --color-ink: #000;
+  --color-ice: #c9e3ef;
+  --color-paper: #f9f9f9;
+  --font-display: 'Bagel Fat One', system-ui, sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+body { @apply bg-white font-sans text-ink antialiased; }
+:focus-visible { outline: 2px solid var(--color-ice); outline-offset: 2px; }
+.field { @apply w-full border border-ink/30 bg-white px-3 py-2; }
+.btn { @apply bg-ink px-5 py-2.5 text-ice disabled:opacity-40; }
